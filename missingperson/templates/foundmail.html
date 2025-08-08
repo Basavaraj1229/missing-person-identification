@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Case Closed: Missing Person Found</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #2ecc71; /* Green color to signify relief */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .details {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Case Closed: Missing Person Found</h1>
+        </div>
+        <div class="content">
+            <p>Dear {{fathers_name}},</p>
+            <p>We are happy to inform you that the case of your missing loved one, {{first_name}} {{last_name}}, has been successfully resolved. The person you reported as missing has been found, and the case is now closed.</p>
+            <p>The details of the closure are as follows:</p>
+            <ul>
+                <li><strong>Name:</strong> {{first_name}} {{last_name}}</li>
+                <li><strong>Aadhar Number:</strong> {{aadhar_number}}</li>
+                <li><strong>Date and Time of Sighting:</strong> {{date_time}}</li>
+                <li><strong>Location of Sighting:</strong> {{location}}</li>
+            </ul>
+            <p>We understand the immense relief this brings to you and your family. The case is now officially closed, and your loved one is safe.</p>
+            <p>We thank you for your cooperation during this time. If you have any further questions or need any assistance, please do not hesitate to contact us.</p>
+            <p>Thank you once again for your trust and patience.</p>
+            <p>Sincerely,</p>
+            <p>Team Indian MissingConnect</p>
+        </div>
+    </div>
+</body>
+</html>

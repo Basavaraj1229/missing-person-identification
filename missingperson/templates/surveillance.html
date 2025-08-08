@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surveillance</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- FontAwesome (for icons) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fb;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #37517E;
+        }
+
+        .navbar a {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        /* Header Section */
+        h2 {
+            text-align: center;
+            color: #37517E;
+            font-size: 36px;
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Button Styling */
+        .btn-outline-success {
+            border-radius: 30px;
+            font-size: 18px;
+            padding: 15px 40px;
+            background-color: transparent;
+            border: 2px solid #28a745;
+            color: #28a745;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-success:hover {
+            background-color: #28a745;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Animation for Camera Instructions */
+        .camera-instruction {
+            font-size: 18px;
+            color: #555;
+            font-weight: 500;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Flex Container for Centering */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Footer (If needed) */
+        footer {
+            background-color: #37517E;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:blue">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand" href="/" style="color:white">
+                <h2 style="color:white">Indian MissingConnect</h2>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <h2>Welcome to Surveillance Mode</h2>
+        <br>
+        <a href="/detect/" class="btn btn-outline-success">Start Webcam <i class="fas fa-video"></i></a>
+        <br><br>
+        <p class="camera-instruction">Press <b>q</b> to Close Camera.</p>
+    </div>
+
+    <!-- Footer (Optional) -->
+    <footer>
+        <p>&copy; 2024 Indian MissingConnect. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-KyZXEJv7nFv6isvQ16tAGFYBh6bxO0x1T1bT6cXsVcsV5I1pa9aG5z0UjU0vcP/6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0K5u+4hNfKwpP4oP7yNduJb6Go6wTqy5CzGfaFwrB4oT7gDh" crossorigin="anonymous"></script>
+
+</body>
+</html>

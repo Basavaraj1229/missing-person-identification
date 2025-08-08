@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing Persons</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd; /* Light Blue Background */
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #1e3d58; /* Darker Blue */
+        }
+
+        .navbar a {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        /* Page Header */
+        h1 {
+            color: #1976d2; /* Primary Blue */
+            font-size: 36px;
+            margin-top: 30px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Search Bar Styles */
+        .search-bar {
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .search-bar .form-control {
+            width: 250px;
+            border-radius: 25px;
+            font-size: 14px;
+            padding: 10px;
+            border: 1px solid #1976d2; /* Light Blue Border */
+        }
+
+        .search-bar .btn {
+            border-radius: 25px;
+            font-size: 14px;
+            padding: 10px 20px;
+            background-color: #f57c00; /* Orange Button */
+            color: white;
+            border: none;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .search-bar .btn:hover {
+            background-color: #e65100; /* Darker Orange on hover */
+            transform: scale(1.05);
+        }
+
+        /* Card Container Styling */
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            background-color: #ffffff;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Footer (Optional) */
+        footer {
+            background-color: #1e3d58; /* Darker Blue */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Animation for Fade In Effect */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:blue">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand" href="/">
+                <h2 style="color:white">Indian <br> MissingConnect</h2>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <!-- Page Header -->
+        <h1 class="text-left">Missing Persons</h1>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <form class="d-flex" method="GET" action="{% url 'missing' %}">
+                <input class="form-control form-control-sm me-2" type="search" name="search" value="{{ search_query }}" placeholder="Search by Aadhar Number" aria-label="Search">
+                <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+            </form>
+        </div>
+
+        <!-- Cards Section (Insert cards or missing persons here) -->
+        <div class="row mt-4">
+            {% include 'card.html' %}
+        </div>
+
+    </div>
+<br/>
+    <br/>
+    <!-- Footer (Optional) -->
+    <footer>
+        <p>&copy; 2024 Indian MissingConnect. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-KyZXEJv7nFv6isvQ16tAGFYBh6bxO0x1T1bT6cXsVcsV5I1pa9aG5z0UjU0vcP/6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0K5u+4hNfKwpP4oP7yNduJb6Go6wTqy5CzGfaFwrB4oT7gDh" crossorigin="anonymous"></script>
+
+</body>
+</html>
